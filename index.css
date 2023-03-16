@@ -1,0 +1,54 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body, html {
+    height: 100%;
+  }
+
+.header{
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 30px;
+    color : black;
+    background-color: lightslategray;
+}
+
+.buttons{  
+
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.items{
+
+    margin: 20px;
+    padding: 20px;
+    font-size: 80px;
+    border-radius: 20px;
+    background-color: lightpink;
+
+}
+
+.Text{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 25px;
+
+}
+
+.paragraph{
+
+    font-style: oblique;
+    font-size: 20px;
+}
