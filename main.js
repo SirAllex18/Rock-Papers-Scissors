@@ -1,3 +1,4 @@
+
 let rounds = 5;
 let PlayerWins = 0;
 let CalculatorWins = 0;
@@ -13,9 +14,17 @@ if (result == 0) {
 }
 
 function playGame() {
-
-let playerSelection = prompt("Choose rock, paper, or scissors.").toLowerCase();
+let playerSelection = "";
+//let playerSelection = prompt("Choose rock, paper, or scissors.").toLowerCase();
 let computerChoice = getComputerChoice();
+if(document.querySelector('#rockBtn').clicked == true){
+    playerSelection = "rock";
+}
+else if(document.getElementById('paperBtn').clicked == true){
+    playerSelection = "paper";
+}else{
+    playerSelection = "scissors";
+}
 
 if (playerSelection == computerChoice) {
     console.log("It's a tie!");
@@ -38,11 +47,20 @@ else if (
 }
 
 }
-function Play5Rounds(){
-for(i = 0; i < rounds; i++){
-    playGame();
-}
-}
 
-Play5Rounds();
-console.log(`The final score is You ${PlayerWins} - ${CalculatorWins} Calculator`);
+
+const rockBtn = document.querySelector("#rockBtn");
+const paperBtn = document.querySelector("#paperBtn");
+const scissorsBtn = document.querySelector("#scissorsBtn");
+
+rockBtn.addEventListener('click', () => { 
+    playGame()
+});
+
+paperBtn.addEventListener('click', () => {
+    playGame();
+})
+
+scissorsBtn.addEventListener('click', () => {
+    playGame();
+})
