@@ -1,5 +1,3 @@
-
-let rounds = 5;
 let PlayerWins = 0;
 let CalculatorWins = 0;
 function getComputerChoice() {
@@ -13,54 +11,36 @@ if (result == 0) {
 }
 }
 
-function playGame() {
-let playerSelection = "";
-//let playerSelection = prompt("Choose rock, paper, or scissors.").toLowerCase();
-let computerChoice = getComputerChoice();
-if(document.querySelector('#rockBtn').clicked == true){
-    playerSelection = "rock";
-}
-else if(document.getElementById('paperBtn').clicked == true){
-    playerSelection = "paper";
-}else{
-    playerSelection = "scissors";
-}
+function playGame(player, calculator) {
 
-if (playerSelection == computerChoice) {
-    console.log("It's a tie!");
-    rounds = rounds + 1;
+if(player == calculator) {
+    paragraph.textContent = "Its a tie!";
+
 }      
-else if (
-    (playerSelection == "rock" && computerChoice == "scissors") ||
-    (playerSelection == "paper" && computerChoice == "rock") ||
-    (playerSelection == "scissors" && computerChoice == "paper")
+else if(
+    (player == "rock" && calculator == "scissors") ||
+    (player == "paper" && calculator == "rock") ||
+    (player == "scissors" && calculator == "paper")
 ) {
-    console.log("You win! " + playerSelection + " beats " + computerChoice + ".");
+    paragraph.textContent = `You win! ${player} beats ${calculator}`;
     PlayerWins++;
-   
-
-}       else {
-    console.log("You lose! " + computerChoice + " beats " + playerSelection + ".");
+   }
+else{
+    paragraph.textContent = `You lost! ${player} loses to ${calculator}`;
     CalculatorWins++;
-   
+   }
 
 }
 
-}
-
-
-const rockBtn = document.querySelector("#rockBtn");
-const paperBtn = document.querySelector("#paperBtn");
-const scissorsBtn = document.querySelector("#scissorsBtn");
-
-rockBtn.addEventListener('click', () => { 
-    playGame()
-});
-
-paperBtn.addEventListener('click', () => {
-    playGame();
+const rockBtn = document.getElementById("rockBtn").addEventListener("click", () => { 
+    playGame("rock", getComputerChoice());
 })
-
-scissorsBtn.addEventListener('click', () => {
-    playGame();
+const paperBtn = document.getElementById("paperBtn").addEventListener("click", () => {
+    playGame("paper", getComputerChoice());
 })
+const scissorsBtn = document.getElementById("scissorsBtn").addEventListener("click", () => {
+    playGame("scissors", getComputerChoice());
+})
+const paragraph = document.getElementById("paragraph");
+
+
