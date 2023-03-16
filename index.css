@@ -15,7 +15,7 @@ body, html {
     padding: 20px;
     font-size: 30px;
     color : black;
-    background-color: lightslategray;
+    background-color:slategrey;
 }
 
 .buttons{  
@@ -47,8 +47,21 @@ body, html {
 
 }
 
-.paragraph{
+#paragraph{
 
     font-style: oblique;
-    font-size: 20px;
+    font-size: 30px;
+}
+
+.Score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+
+}
+
+#tabel{
+    
+    font-size: 30px;
 }
