@@ -36,18 +36,32 @@ function playGame(player, calculator) {
 
         }
         
-    tabel.textContent = `The score is You ${PlayerWins} - ${CalculatorWins} Calculator`;
+    result.textContent = `The score is You ${PlayerWins} - ${CalculatorWins} Calculator`;
     
     if(CalculatorWins == 5){
-        tabel.textContent = `The score is You ${PlayerWins} - ${CalculatorWins} Calculator`;
-        return alert("Bummer, you lost the game!");
+        result.textContent = `The score is You ${PlayerWins} - ${CalculatorWins} Calculator`;
+        alert("Bummer, you lost the game!");
+        resetGame();
+     
             
         }
     else if(PlayerWins == 5){
-        tabel.textContent = `The score is You ${PlayerWins} - ${CalculatorWins} Calculator`;
-        return alert("Congratulations, you won!");
+        result.textContent = `The score is You ${PlayerWins} - ${CalculatorWins} Calculator`;
+        alert("Congratulations, you won!");
+        return resetGame();
+ 
         }
 }
+
+
+function resetGame(){
+    PlayerWins = 0;
+    CalculatorWins = 0;
+    paragraph.textContent = "So you want to go again!";
+    result.textContent = "The score is:"
+}
+
+
 
 const rockBtn = document.getElementById("rockBtn").addEventListener("click", () => { 
     playGame("rock", getComputerChoice());
@@ -60,4 +74,4 @@ const scissorsBtn = document.getElementById("scissorsBtn").addEventListener("cli
 })
 const paragraph = document.getElementById("paragraph");
 
-const tabel = document.getElementById("tabel");
+const result = document.getElementById("result");

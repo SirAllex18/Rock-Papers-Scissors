@@ -20,7 +20,8 @@ body, html {
 
 .buttons{  
 
-    background-color: azure;
+   
+    background-color:azure;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +29,7 @@ body, html {
 
 
 .items{
-
+    
     margin: 20px;
     padding: 20px;
     font-size: 80px;
@@ -38,7 +39,7 @@ body, html {
 }
 
 .Text{
-
+    background-color: azure;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,11 +50,14 @@ body, html {
 
 #paragraph{
 
+    padding-left: 20px;
     font-style: oblique;
     font-size: 30px;
 }
 
 .Score{
+
+    background-color: azure;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,7 +65,8 @@ body, html {
 
 }
 
-#tabel{
+#result{
     
     font-size: 30px;
 }
+
