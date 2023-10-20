@@ -19,8 +19,6 @@ body, html {
 }
 
 .buttons{  
-
-   
     background-color:azure;
     display: flex;
     justify-content: center;
@@ -29,7 +27,6 @@ body, html {
 
 
 .items{
-    
     margin: 20px;
     padding: 20px;
     font-size: 80px;
@@ -49,14 +46,12 @@ body, html {
 }
 
 #paragraph{
-
     padding-left: 20px;
     font-style: oblique;
     font-size: 30px;
 }
 
 .Score{
-
     background-color: azure;
     display: flex;
     justify-content: center;
@@ -66,7 +61,18 @@ body, html {
 }
 
 #result{
-    
     font-size: 30px;
 }
 
+.footer{
+    background-color: slategrey;
+}
+
+.footer-text {
+    height: 150px;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    margin-right: 20px;
+    height: 200px;
+}
